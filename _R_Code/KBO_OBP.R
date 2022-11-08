@@ -22,24 +22,24 @@ min_bat <- min_bat[,-1]
 # Bat result - hit
 for (i in 1:nrow(bar_det)) {
   
-  if(bar_det[i,]$result == "´ÜÅ¸" |
-     bar_det[i,]$result == "³»¾ß¾ÈÅ¸" |
-     bar_det[i,]$result == "¹øÆ®¾ÈÅ¸"){
+  if(bar_det[i,]$result == "ë‹¨íƒ€" |
+     bar_det[i,]$result == "ë‚´ì•¼ì•ˆíƒ€" |
+     bar_det[i,]$result == "ë²ˆíŠ¸ì•ˆíƒ€"){
     bar_det[i,5] = 1
     bar_det[i,6] = 1
   }
   
-  if(bar_det[i,]$result == "2·çÅ¸"){
+  if(bar_det[i,]$result == "2ë£¨íƒ€"){
     bar_det[i,5] = 2
     bar_det[i,6] = 1
   }
   
-  if(bar_det[i,]$result == "3·çÅ¸"){
+  if(bar_det[i,]$result == "3ë£¨íƒ€"){
     bar_det[i,5] = 3
     bar_det[i,6] = 1
   }
   
-  if(bar_det[i,]$result == "È¨·±"){
+  if(bar_det[i,]$result == "í™ˆëŸ°"){
     bar_det[i,5] = 4
     bar_det[i,6] = 1
   }
@@ -106,7 +106,7 @@ avPlots(kbo_mlr)
 
 # Std.Residual histogram (normality)
 std <- stdres(kbo_mlr)
-hist(std, main = "Ç¥ÁØ¿ÀÂ÷", xlab = "Standardized Residuals")
+hist(std, main = "í‘œì¤€ì˜¤ì°¨", xlab = "Standardized Residuals")
 
 ks.test(std,"pnorm")
 
