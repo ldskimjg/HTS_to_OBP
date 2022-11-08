@@ -4,9 +4,6 @@
 #######                                                ###########
 ##################################################################
 
-# Setting up the working directory
-setwd("C:/Users/sports2i/Desktop/WD")
-
 # Loading Library
 library(tidyverse)
 library(car)
